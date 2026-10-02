@@ -1,0 +1,17 @@
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  // maplibre-gl's web worker can't be located once Vite pre-bundles the package
+  // ("Worker failed to load. Check that the worker URL is correct.") - serve it unbundled.
+  optimizeDeps: {
+    exclude: ['maplibre-gl'],
+  },
+  server: {
+    proxy: {
+      '/api': 'http://127.0.0.1:8000',
+    },
+  },
+})

@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.venv/
+**/.venv/
+*.egg-info/
+.eggs/
+
+# Node
+node_modules/
+**/node_modules/
+dist/
+
+# Databases & caches
+*.sqlite3
+*.db
+ruvector.db
+**/ruvector.db
+
+# Playwright & internal tools
+.playwright-mcp/
+
+# Claude / Swarm internals
+.claude-flow/
+**/.claude-flow/
+.swarm/
+
+# Env files
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Screenshot helper script (only needed locally)
+docs/images/take_screenshots.js
+docs/images/package.json
+docs/images/package-lock.json
